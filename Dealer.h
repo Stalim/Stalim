@@ -5,12 +5,12 @@
 class Dealer
 {
 private:
-	Card deck[4][13];
+	Card deck[4][13];     // creats deck of cards
 public:
 	Dealer();
 	~Dealer();
-	Card dealNewCard();
-	void removeFromDeck(Card card); 
+	Card dealNewCard();                 // generates random card, if already removed, generatetes another random card
+	void removeFromDeck(Card card);  // Needs to be called after each dealNewCard method call to mark card as removed
 };
 
 #endif

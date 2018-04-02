@@ -14,7 +14,7 @@ Dealer::Dealer()
 	for (int i = 0; i < 4; i++) {
 		for (int j = 0; j < 13; j++) {
 
-			card.setRank(i);
+			card.setRank(i);                 // creates deck, index [i][j] corresponds with [suit][rank]
 			card.setSuit(j);
 
 			deck[i][j] = card;
@@ -41,19 +41,19 @@ Card Dealer::dealNewCard() {
 		unsigned seed = chrono::system_clock::now().time_since_epoch().count();
 		default_random_engine generator(seed);
 		uniform_int_distribution<int> distributionRank(0, 12);
-		uniform_int_distribution<int> distributionSuit(0, 3);
+		uniform_int_distribution<int> distributionSuit(0, 3);           // uniform distribution random generator
 
 		rank = distributionRank(generator);
 		suit = distributionSuit(generator);
 
 
-		if (deck[rank][suit].getRank() == -1 && deck[rank][suit].getSuit() == -1) {
+		if (deck[rank][suit].getRank() == -1 && deck[rank][suit].getSuit() == -1) {   // if card is removed, generate new random card from deck
 			drawn = true;
 		}
 		else {
 			deck[rank][suit].setRank(rank);
-			deck[rank][suit].setSuit(suit);			
-			return deck[rank][suit]; 
+			deck[rank][suit].setSuit(suit);			 // if not removed, return card
+			return deck[rank][suit];
 		}
 
 	} while (drawn);
@@ -61,13 +61,13 @@ Card Dealer::dealNewCard() {
 }
 
 void Dealer::removeFromDeck(Card card) {
-		
-	deck[card.getRank()][card.getSuit()].setRank(-1);
+
+	deck[card.getRank()][card.getSuit()].setRank(-1);    // -1 fields marks card as removed
 	deck[card.getRank()][card.getSuit()].setSuit(-1);
 
 }
 
-int main() {
+int main() {               // use this main to test. 
 
 	Card holes[2];
 
@@ -87,4 +87,4 @@ int main() {
 	system("pause");
 
 	return 0;
-} 
+}
