@@ -1,7 +1,5 @@
 #include "Dealer.h"
 #include "Card.h"
-#include<stdlib.h>
-#include<time.h>
 #include<chrono>
 #include<random>
 #include<iostream>
