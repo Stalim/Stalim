@@ -5,7 +5,7 @@
 #ifndef POKERGAME_GAME_H
 #define POKERGAME_GAME_H
 
-#include <iostream>;
+#include <iostream>
 
 using namespace std;
 
@@ -27,7 +27,7 @@ private:
 
 public:
 
-    void Game();
+    Game();
     void printMainMenu();
     void readRules();
     void startBlinds();
