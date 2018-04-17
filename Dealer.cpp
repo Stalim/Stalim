@@ -26,7 +26,11 @@ Dealer::Dealer()
 
 Dealer::~Dealer()
 {
-
+	// This will deallocate the memory used for the array once main ends.
+	for(int i = 0; i < 13; i++) {
+		delete[] deck[13];
+	}
+	delete[] deck;
 }
 
 Card Dealer::dealNewCard() {
