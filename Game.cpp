@@ -3,6 +3,8 @@
 //
 
 #include "Game.h"
+#include "Dealer.h"
+#include "Card.h"
 
 using namespace std;
 
