@@ -1,0 +1,28 @@
+
+Welcome to our version of Texas Hold'Em Poker.
+
+This version of Poker has been edited and streamlined from the original Texas Hold'Em game.
+
+
+Rules:
+
+         
+-Each player is dealt two cards face down, called ‘hole cards’.
+
+-Each round of betting the user can check, call, raise, or fold.
+
+-If you don’t like your hand, you can fold, relinquishing your cards and taking no further part in the hand.
+
+-Any money that you have already contributed in the pot is lost.
+
+-A call involves matching the amount already bet to see the next card (or showdown if the last card was the river card). 
+
+-If you like your hand, you can raise, forcing the original bettor to match your raise if you wants to continue the hand. 
+
+-You may check only if no one else in the round has placed a bet.
+
+-Three cards are placed down (“the flop”), then a fourth card (“the turn”), and, finally, the fifth card (“the river”). 
+
+-The winner of the round is the person with the highest ranking hand during the showdown (after the bets following the river).
+
+Good luck!
