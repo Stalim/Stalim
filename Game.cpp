@@ -3,8 +3,8 @@
 //
 
 #include "Game.h"
-#include "Dealer.h"
-#include "Card.h"
+#include "User.cpp"
+#include "Opponent.cpp"
 
 using namespace std;
 
@@ -79,6 +79,17 @@ int main() {
     int choice = 0;
     bool inputCheck;
 
+    //***************************************** NEW CONTENT
+
+    int dealtPockets[2];
+    User * player = new User(dealtPockets);
+    Opponent * smartSteven = new Opponent(dealtPockets);
+    Opponent * aggressiveAdam = new Opponent(dealtPockets);
+    Opponent * blufferBilly = new Opponent(dealtPockets);
+    Opponent * rockRobin = new Opponent(dealtPockets);
+
+    //*****************************************
+
     cout << "Paige's opening and description" << endl;
 
     //PUT ALL OF PAIGE/PREETHI'S WORK HERE!!!!!
@@ -130,7 +141,9 @@ int main() {
         cout << "1. Call" << endl;
         cout << "2. Raise" << endl;
         cout << "3. Fold" << endl;
-        cout << "4. Quit game" << endl << endl;
+        cout << "4. View hand" << endl;
+        cout << "5. View rules" << endl;
+        cout << "6. Quit game" << endl << endl;
 
         //Catch bad input
         try {
@@ -178,7 +191,17 @@ int main() {
                 cout << "Placeholder 3a" << endl << endl;
                 break;
 
-            case 4:
+            case 4: //NEW!!!
+
+                player -> getUserPocket();
+                break;
+
+            case 5:
+
+                cout << "Rules printed and accessed here." << endl << endl;
+                break;
+
+            case 6:
 
                 return 0;
 
@@ -193,6 +216,8 @@ int main() {
             if (counter == 0)
                 cout << "Flop:" << endl << endl;
 
+                //EXPAND IF-STATEMENT TO DEAL ALL PLAYERS THE POCKET CARDS???
+
             else if (counter == 1)
                 cout << "Turn:" << endl << endl;
 
@@ -205,7 +230,9 @@ int main() {
             cout << "2. Check" << endl;
             cout << "3. Call" << endl;
             cout << "4. Fold" << endl;
-            cout << "5. Quit game" << endl << endl;
+            cout << "5. View hand" << endl;
+            cout << "6. View rules" << endl;
+            cout << "7. Quit game" << endl << endl;
 
             //Catch bad input
             try {
@@ -258,7 +285,17 @@ int main() {
                     cout << "Placeholder 4b" << endl << endl;
                     break;
 
-                case 5:
+                case 5: //NEW!!!
+
+                    player -> getUserPocket();
+                    break;
+
+                case 6:
+
+                    cout << "Rules printed and accessed here." << endl << endl;
+                    break;
+
+                case 7:
 
                     return 0;
 
